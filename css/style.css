@@ -1,0 +1,91 @@
+/* sample comment */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    background-image: url('../images/background.png');
+    font-size: large;
+}
+
+img {
+    border: 10px solid green;
+    display: block;
+    margin: 0 auto;
+    float:left;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+}
+
+nav li {
+    display: inline-block;
+    border: 1rem solid blue;
+    margin: 1rem;
+    background-color: red;
+    flex-basis:auto;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: white;
+    color:green;
+}
+
+h1 {
+    border: 5px dotted black;
+    background-image: linear-gradient(blue, aliceblue);
+}
+
+blockquote {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+cite {
+    font-size: 1rem;
+    background-color: red;
+}
+
+.bigbold {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+p {
+    border: medium solid purple;
+}
+
+p:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a:link {
+    color: black;
+    font-size: 2rem;
+}
+
+a:visited {
+    color: blue;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a.goog {
+    color: green;
+}
