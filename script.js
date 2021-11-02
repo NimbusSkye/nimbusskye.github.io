@@ -21,6 +21,7 @@ async function init() {
     const res = await fetch(url)
     weather = await res.json()
     updateDisplay()
+    searchBar.addEventListener('keydown',e=>fetchCurrent(e))
     submit.addEventListener('click', ()=>fetchCurrent())
 }
 
@@ -40,12 +41,14 @@ async function fetchMultiDay () {
     })
 }
 
-async function fetchCurrent () {
-    inputCity=searchBar.value
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${apiKey}`
-    const res = await fetch(url)
-    weather = await res.json()
-    updateDisplay()
+async function fetchCurrent (e) {
+    if (e==null || e.keyCode==13) {
+        inputCity=searchBar.value
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${apiKey}`
+        const res = await fetch(url)
+        weather = await res.json()
+        updateDisplay()
+    }
 }
 
 function updateDisplay () {
@@ -87,11 +90,8 @@ function updateDisplay () {
         default:
             image.src='https://i.imgur.com/GhyWeYB.jpeg'
             document.body.style.backgroundColor = 'grey'
+            document.body.style.color = 'white'
     }
-}
-
-function KtoC (kelvin) {
-    return Math.round(kelvin-273.15)
 }
 
 function translate (description) {
