@@ -11,15 +11,15 @@ body {
     align-items: center;
   } 
 
-  .wi {
-    font-size: 6rem;
-    color: white;
-    margin-bottom: 2rem;
-  }
+.wi {
+  font-size: 6rem;
+  color: white;
+  margin-bottom: 2rem;
+}
 
 .container {
   display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,8 @@ input {
 }
 
 img {
-  flex-basis: 40%;
+  flex-basis: 50%;
+  width:50%;
   margin: 40px;
   border: 2px solid white
 }
